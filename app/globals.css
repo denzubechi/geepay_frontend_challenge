@@ -3,17 +3,16 @@
 @tailwind utilities;
 
 
-@import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300&display=swap');
 @font-face {
-  font-family: "Readex Pro";
-  src: url('../fonts/ReadexPro-Medium.ttf') format('truetype'); 
+  font-family: "Jakarta Sans";
+  src: url('../fonts/PlusJakartaSans-Medium.ttf') format('truetype'); 
 }
 body::-webkit-scrollbar{
   display: none;
 }
 
 body {
-  font-family: Readex Pro; 
+  font-family: Jakarta Sans; 
 }
 .children::-webkit-scrollbar{
   display: none;

@@ -165,7 +165,7 @@ const SideNav = () => {
         <div className='flex justify-center flex-col gap-4   lg:bottom:18' onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
           {BottomlinkItems.map((item, index) => (
             <Link key={index} href={item.href}>
-              <div className='flex items-center relative px-2 py-1 hover:bg-green-500 hover:text-white rounded-lg'>
+              <div className='flex items-center relative px-2 py-1 hover:bg-green-500 hover:text-white rounded-l-lg'>
                 <div className="flex items-center hover:text-white">
                   {item.icon}
                   <span className={linkTextClasses}>{item.text}</span>

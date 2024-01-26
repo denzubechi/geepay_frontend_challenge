@@ -11,11 +11,18 @@ const SalesTrend = () => {
         </p>
         <p className="whitespace-nowrap text-sm lg:text-md font-light text-gray-500 sm:block">
             Sort by:
-            <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown" className="text-gray-700 dark:text-gray-300  font-medium  border border-gray-500 rounded-full text-sm px-4 mx-2 py-2 text-center inline-flex items-center " type="button">Weekly<svg className="w-2 h-2 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
-          </svg>
-          </button>
+            <select
+              id="countries"
+              data-dropdown-toggle="dropdown"
+              className="cursor-pointer text-gray-700 dark:text-gray-300 font-medium border border-gray-500 rounded-full text-sm px-4 mx-2 py-2 text-center inline-flex items-center bg-transparent"
+            >
+            <option selected>Weekly</option>
+            <option value="CA">Monthly</option>
+            <option value="US">Yearly</option>
+          </select>
         </p>
+
+  
     </div>
     <div className="max-w-screen-xl  mx-auto ">
          <div className="mt-4 border-0 overflow-x-auto">

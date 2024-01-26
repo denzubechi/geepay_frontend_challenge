@@ -1,6 +1,4 @@
-
-
-const ContentAside = (): JSX.Element => {
+const TotalCards = (): JSX.Element => {
   const Cards = [
     {
       text: 'Total Order',
@@ -64,14 +62,11 @@ const ContentAside = (): JSX.Element => {
     },
     
   ];
-
-
-
     return (
       <div className="grid gap-4 lg:col-span-5 xl:gap-8 sm:mr-2 mr-3">
       <div className="grid md:grid-cols-2 gap-4 xl:gap-8">
             {Cards.map((item, index) => (
-              <div  key={index} className="bg-white p-4 rounded-[0.875rem] border border-[#edf2f7] grid gap-[0.625rem] dark:bg-slate-800 dark:border-slate-900">
+              <div  key={index} className="bg-white p-4 rounded-[0.875rem] border border-[#edf2f7] grid gap-[0.625rem] cards text-gray-800 dark:bg-black dark:text-gray-200 dark:border-0">
                   <div className="flex items-center justify-between">
                   {item.icon} 
                       {item.progress === 'increase' ? (
@@ -98,10 +93,10 @@ const ContentAside = (): JSX.Element => {
                               </svg>
                           )}
                      </div>
-                        <h3 className="text-[#898989] font-medium leading-[1.625rem] text-lg dark:text-slate-200">
+                        <h3 className="text-[#898989] font-medium leading-[1.625rem] text-lg dark:text-slate-500">
                         {item.text}
                     </h3>
-                    <p className="font-semibold text-[#3a3f51] text-2xl leading-8 dark:text-white">
+                    <p className="font-semibold text-[#3a3f51] text-2xl leading-8 dark:text-slate-300">
                         {item.value}
                     </p>
                     <div className="flex items-center justify-between gap-4">
@@ -123,7 +118,7 @@ const ContentAside = (): JSX.Element => {
                         )}
                         {item.percentage}%
                     </p>
-                        <p className="text-[#606060] text-sm dark:text-white">
+                        <p className="text-[#606060] text-sm dark:text-slate-400">
                             vs. previous month
                         </p>
                     </div>
@@ -135,4 +130,4 @@ const ContentAside = (): JSX.Element => {
     );
 };
 
-export default ContentAside;
+export default TotalCards;

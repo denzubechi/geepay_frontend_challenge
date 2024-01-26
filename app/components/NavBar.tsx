@@ -128,12 +128,12 @@ const Navbar = () => {
                         </svg>
                     </div>
 
-                    <div >
+                    <div className='text-gray-500 dark:text-gray-400'>
                         <Menu as="div" className="relative inline-block text-left">
                             {({ open }) => (
                                 <>
-                                    <Menu.Button className="cursor-pointer focus:outline-none flex items-center space-x-3 p-2 border dark:border-gray-600 rounded-full">
-                                        
+                                <Menu.Button className="cursor-pointer focus:outline-none flex items-center space-x-3 p-1  py-1 mx-4 border border-gray-400 dark:border-gray-500 rounded-full">
+                                            
                                         <span className='rounded-full border border-gray-300 dark:border-gray-600'>
                                             <Image 
                                             className="w-10 h-10"
@@ -161,9 +161,9 @@ const Navbar = () => {
                                         leave="transition ease-in duration-75"
                                         leaveFrom="transform opacity-100 scale-100"
                                         leaveTo="transform opacity-0 scale-95"
-                                    >
-                                        <Menu.Items static className="absolute right-0 w-56 z-50 mt-2 origin-top-right bg-white rounded-lg   shadow-lg">
-                                            <div className="py-1">
+                                        >
+                                        <Menu.Items static className="absolute right-0 w-56 z-50 mt-2 px-2 origin-top-right bg-white dark:bg-gray-900 border dark:border-gray-800 rounded-lg shadow-xl">
+                                           <div className="py-1">
                                                 <Menu.Item>
                                                     {({ active }) => (
                                                         <a

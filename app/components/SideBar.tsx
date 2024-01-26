@@ -6,7 +6,7 @@ import ThemeSwitch from './ThemeSwitch'
 
 const SideNav = () => {
 
-    const [isCollapsed, setCollapsed] = useState(false);
+    const [isCollapsed, setCollapsed] = useState(true);
 
     const handleMouseEnter = () => {
         setCollapsed(false);
@@ -142,11 +142,12 @@ const SideNav = () => {
     return (
         <div className={` ${sidebarClasses}`}>
             <div className='flex justify-center flex-col gap-4'
-                            onMouseEnter={handleMouseEnter}
-                            onMouseLeave={handleMouseLeave}
-            >
+              onMouseEnter={handleMouseEnter}
+              onMouseLeave={handleMouseLeave}
+            >    
                 {linkItems.map((item, index) => (
-                    <Link key={index} href={item.href}>
+                    <Link key={index} href={item.href}   
+                  >
                         <div className='flex items-center relative pl-2 py-1 hover:bg-green-500 hover:text-white rounded-l-lg'>
                         <div className='flex items-center hover:text-white'>
                             {item.icon}
@@ -154,13 +155,19 @@ const SideNav = () => {
                         </div>
                         </div>
                     </Link>
-                ))}     
-                <div className={`${isCollapsed ? 'px-0' : 'px-8'}`}>
+                ))}   
+      
+             
+            </div>
+
+            <div className='flex justify-center flex-col gap-4 mt-4'>
+                <div className={`${isCollapsed ? 'px-0' : 'px-8'}`}
+                    >
                     <ThemeSwitch />
                 </div>
             </div>
 
-            <div className='flex justify-center flex-col gap-4 absolute bottom-24 lg:bottom:18'
+            <div className='flex justify-center flex-col gap-4 absolute bottom-28 lg:bottom:18'
                  onMouseEnter={handleMouseEnter}
                  onMouseLeave={handleMouseLeave}
             >

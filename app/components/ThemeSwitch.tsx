@@ -11,12 +11,13 @@ export default function ThemeSwitch() {
   };
 
   const isActive = theme === "light";
-  const changeClasses= `flex  w-6 h-6 text-dark bg-white  rounded-full transform ${isActive ? 'translate-x-0' : 'translate-x-6'} transition-transform duration-500 ease-in-out`;
+  const containerClasses = `relative  mt-3 w-14 mx-0 h-8 rounded-full p-1 cursor-pointer bg-white border border-gray-200 dark:border-gray-600 dark:bg-gray-700 rotate-90`;
+  const switchClasses = `flex items-center justify-center w-6 h-6 text-dark bg-white rounded-full transform  ${isActive ? 'translate-x-0' : 'translate-x-6 '} transition-transform duration-500 ease-in-out`;
 
   return (
-<div className="relative w-14 h-8 rounded-full p-1 cursor-pointer bg-white dark:bg-gray-700 rotate-90" onClick={switchTheme} style={{ transformOrigin: 'center', transform: 'translateY(-50%)' }}>
+<div className={containerClasses} onClick={switchTheme} >
 
-      <button className={changeClasses}>
+      <button className={switchClasses}>
       {isActive ? (
         <Image 
         className="w-6 h-6"

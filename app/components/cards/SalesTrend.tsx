@@ -8,7 +8,10 @@ const SalesTrend = () => {
             Sales Trends
         </p>
         <p className="text-md font-light text-gray-500 sm:block">
-            Sort by
+            Sort by:
+            <span className='p-2 mx-2 px-4 border rounded-full'>
+                weekly
+            </span>
         </p>
     </div>
 </div>

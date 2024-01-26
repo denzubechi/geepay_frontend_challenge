@@ -153,7 +153,7 @@ const SideNav = () => {
                 </div>
             </div>
 
-            <div className='flex justify-center flex-col gap-4 absolute bottom-4'>
+            <div className='flex justify-center flex-col gap-4 absolute bottom-14 lg:bottom:18'>
                 {BottomlinkItems.map((item, index) => (
                 <Link key={index} href={item.href}>
                     <div className='flex items-center relative px-2 py-1 hover:bg-green-500 hover:text-white rounded-lg'>

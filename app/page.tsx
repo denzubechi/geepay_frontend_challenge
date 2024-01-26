@@ -8,7 +8,7 @@ export default function Home() {
 
 	return (
 		<>	
-			<div className="lg:flex">
+			<div className="lg:flex mb-4">
 				<div className="lg:w-2/3">
 					<SalesTrend/>
 				</div>

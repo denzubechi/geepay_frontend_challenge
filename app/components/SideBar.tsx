@@ -141,48 +141,40 @@ const SideNav = () => {
 
     return (
         <div className={` ${sidebarClasses}`}>
-            <div className='flex justify-center flex-col gap-4'
-              onMouseEnter={handleMouseEnter}
-              onMouseLeave={handleMouseLeave}
-            >    
-                {linkItems.map((item, index) => (
-                    <Link key={index} href={item.href}   
-                  >
-                        <div className='flex items-center relative pl-2 py-1 hover:bg-green-500 hover:text-white rounded-l-lg'>
-                        <div className='flex items-center hover:text-white'>
-                            {item.icon}
-                            <span className={linkTextClasses}>{item.text}</span>
-                        </div>
-                        </div>
-                    </Link>
-                ))}   
-      
-             
-            </div>
-
-            <div className='flex justify-center flex-col gap-4 mt-4'>
-                <div className={`${isCollapsed ? 'px-0' : 'px-8'}`}
-                    >
-                    <ThemeSwitch />
+        <div className='flex justify-center flex-col gap-4' onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+          {linkItems.map((item, index) => (
+            <Link key={index} href={item.href}>
+              <div className='flex items-center relative pl-2 py-1 hover:bg-green-500 hover:text-white rounded-l-lg'>
+                <div className='flex items-center hover:text-white'>
+                  {item.icon}
+                  <span className={linkTextClasses}>{item.text}</span>
                 </div>
-            </div>
-
-            <div className='flex justify-center flex-col gap-4 absolute bottom-28 lg:bottom:18'
-                 onMouseEnter={handleMouseEnter}
-                 onMouseLeave={handleMouseLeave}
-            >
-                {BottomlinkItems.map((item, index) => (
-                <Link key={index} href={item.href}>
-                    <div className='flex items-center relative px-2 py-1 hover:bg-green-500 hover:text-white rounded-lg'>
-                    <div className="flex items-center hover:text-white">
-                        {item.icon}
-                        <span className={linkTextClasses}>{item.text}</span>
-                    </div>
-                    </div>
-                </Link>
-                ))}  
-            </div>
+              </div>
+            </Link>
+          ))}
+         
         </div>
+
+        <div className={`${isCollapsed ? 'px-0' : 'px-8'} py-5 mb-20`}>
+            {/* Wrap ThemeSwitch in a separate div */}
+            <div className="">
+              <ThemeSwitch />
+            </div>
+          </div>
+  
+        <div className='flex justify-center flex-col gap-4   lg:bottom:18' onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+          {BottomlinkItems.map((item, index) => (
+            <Link key={index} href={item.href}>
+              <div className='flex items-center relative px-2 py-1 hover:bg-green-500 hover:text-white rounded-lg'>
+                <div className="flex items-center hover:text-white">
+                  {item.icon}
+                  <span className={linkTextClasses}>{item.text}</span>
+                </div>
+              </div>
+            </Link>
+          ))}
+        </div>
+      </div>
     )
 }
 

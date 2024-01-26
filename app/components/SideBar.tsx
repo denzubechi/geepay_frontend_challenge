@@ -8,8 +8,12 @@ const SideNav = () => {
 
     const [isCollapsed, setCollapsed] = useState(false);
 
-    const toggleCollapse = () => {
-        setCollapsed(!isCollapsed);
+    const handleMouseEnter = () => {
+        setCollapsed(false);
+    };
+
+    const handleMouseLeave = () => {
+        setCollapsed(true);
     };
 
     const sidebarClasses = `md:flex flex-col  justify-between pb-10 h-screen pt-24 lg:pt-28 border-r border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-black pl-3 absolute top-0 left-0 ${
@@ -137,11 +141,14 @@ const SideNav = () => {
 
     return (
         <div className={` ${sidebarClasses}`}>
-            <div className='flex justify-center  flex-col gap-4'>
+            <div className='flex justify-center flex-col gap-4'
+                            onMouseEnter={handleMouseEnter}
+                            onMouseLeave={handleMouseLeave}
+            >
                 {linkItems.map((item, index) => (
                     <Link key={index} href={item.href}>
                         <div className='flex items-center relative pl-2 py-1 hover:bg-green-500 hover:text-white rounded-l-lg'>
-                        <div className='flex items-center hover:text-white ' onClick={toggleCollapse}>
+                        <div className='flex items-center hover:text-white'>
                             {item.icon}
                             <span className={linkTextClasses}>{item.text}</span>
                         </div>
@@ -153,11 +160,14 @@ const SideNav = () => {
                 </div>
             </div>
 
-            <div className='flex justify-center flex-col gap-4 absolute bottom-14 lg:bottom:18'>
+            <div className='flex justify-center flex-col gap-4 absolute bottom-24 lg:bottom:18'
+                 onMouseEnter={handleMouseEnter}
+                 onMouseLeave={handleMouseLeave}
+            >
                 {BottomlinkItems.map((item, index) => (
                 <Link key={index} href={item.href}>
                     <div className='flex items-center relative px-2 py-1 hover:bg-green-500 hover:text-white rounded-lg'>
-                    <div className="flex items-center hover:text-white"  onClick={toggleCollapse}>
+                    <div className="flex items-center hover:text-white">
                         {item.icon}
                         <span className={linkTextClasses}>{item.text}</span>
                     </div>

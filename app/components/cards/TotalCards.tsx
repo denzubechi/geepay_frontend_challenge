@@ -66,7 +66,7 @@ const TotalCards = (): JSX.Element => {
       <div className="grid gap-4 lg:col-span-5 xl:gap-8 sm:mr-2 mr-3">
       <div className="grid md:grid-cols-2 gap-4 xl:gap-8">
             {Cards.map((item, index) => (
-              <div  key={index} className="bg-white p-4 rounded-[0.875rem] border border-[#edf2f7] grid gap-[0.625rem] cards text-gray-800 dark:bg-black dark:text-gray-200 dark:border-0">
+              <div  key={index} className="bg-white p-4 rounded-[0.875rem] border border-[#edf2f7] grid gap-[0.625rem] cards text-gray-800 dark:bg-slate-950 dark:text-gray-200 dark:border-0">
                   <div className="flex items-center justify-between">
                   {item.icon} 
                       {item.progress === 'increase' ? (

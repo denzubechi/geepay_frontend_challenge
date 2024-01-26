@@ -40,7 +40,7 @@ const LastOrders = () => {
         },
     ]
   return (
-    <div className='bg-white text-gray-800 dark:bg-black dark:text-gray-200 p-4 m-2 ml-0 rounded-lg cards dark:border-0'>
+    <div className='bg-white text-gray-800 dark:bg-slate-950 dark:text-gray-200 p-4 m-2 ml-0 rounded-lg cards dark:border-0'>
       <div className="flex justify-between mx-auto items-center mb-4">
                 <p className="text-lg font-medium dark:text-gray-300">
                     Last Orders

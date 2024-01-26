@@ -1,10 +1,61 @@
+"use client"
 import React from 'react'
-import BarChart from '../charts/BarChat'
-import { barChartDataDailyTraffic } from '../charts/variables/charts'
-import { barChartOptionsDailyTraffic } from '../charts/variables/charts'
+import {
+  Chart as ChartJS,
+  CategoryScale,
+  LinearScale,
+  BarElement,
+  Title,
+  Tooltip,
+  Legend,
+} from "chart.js";
+import { Bar } from "react-chartjs-2";
+
 const SalesTrend = () => {
+
+        const generateRandomValues = (numPoints: number, min: number, max: number) => {
+          const data = [];
+          for (let i = 0; i < numPoints; i++) {
+              data.push(Math.floor(Math.random() * (max - min + 1)) + min);
+          }
+          return data;
+      };
+      ChartJS.register(
+        CategoryScale,
+        LinearScale,
+        BarElement,
+        Title,
+        Tooltip,
+        Legend
+    );
+    const data = {
+      labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+      datasets: [
+          {
+              backgroundColor: 'rgba(52, 202, 165, 0.10)',
+              borderRadius: 20,
+              hoverBackgroundColor: "rgba(52, 202, 165, 0.50)",
+              data: generateRandomValues(12, 100, 50000),
+          },
+      ],
+    };
+
+    const options = {
+      maintainAspectRatio: false,
+      plugins: {
+          legend: {
+              display: false,
+          },
+      },
+      scales: {
+          y: {
+              beginAtZero: true,
+          },
+      },
+    };
+
   return (
-    <div className='bg-white text-gray-800 dark:bg-black dark:text-gray-200 p-4 m-2 ml-0 rounded-lg cards dark:border-0'>
+    <div className='bg-white text-gray-800 dark:bg-slate-950 dark:text-gray-200 p-4 m-2 ml-0 rounded-lg cards dark:border-0'>
         <div className="flex justify-between mx-auto items-center mb-4">
         <p className="whitespace-nowrap mr-2 text-lg font-medium dark:text-gray-300">
             Sales Trends
@@ -22,13 +73,11 @@ const SalesTrend = () => {
           </select>
         </p>
 
-  
     </div>
-    <div className="max-w-screen-xl  mx-auto ">
-         <div className="mt-4 border-0 overflow-x-auto">
-        
-          </div>
-    </div>
+    <div className="overflow-x-auto custom-scrollbar h-[250px] cursor-pointer">
+                    <Bar data={data} options={options} />
+                </div>
+   
 </div>
   )
 }

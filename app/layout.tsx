@@ -19,20 +19,23 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className='bg-layout dark:bg-gray-900'>
+    <body className="bg-layout dark:bg-gray-900">
       <link rel="icon" href="/favicon.ico" sizes="any" />
-          <Providers>
-            <div className="flex absolute w-full">
-            <Navbar />
-          </div>
-          <div className="flex min-h-screen">
-            <SideBar />
-            <div className="pl-20 lg:pl-20 pt-20 lg:pt-28 w-full h-screen overflow-hidden overflow-y-auto no-scrollbar children">
-              {children}
-            </div>
-          </div>
-          </Providers>
-      </body>
-    </html>
+      <Providers>
+        {/* Navbar with fixed positioning */}
+        <div className="fixed top-0 w-full z-50">
+          <Navbar />
+        </div>
+        {/* Sidebar with fixed positioning */}
+        <div className="fixed top-0 h-screen">
+          <SideBar />
+        </div>
+        {/* Main content with scrolling */}
+        <div className="pl-20 lg:pl-20 pt-20 lg:pt-28 w-full h-screen overflow-hidden overflow-y-auto no-scrollbar children">
+          {children}
+        </div>
+      </Providers>
+    </body>
+  </html>
   )
 }

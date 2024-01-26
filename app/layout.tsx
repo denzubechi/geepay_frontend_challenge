@@ -19,7 +19,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-    <body className="bg-layout dark:bg-gray-900">
+    <body className="bg-layout dark:bg-gray-800">
       <link rel="icon" href="/favicon.ico" sizes="any" />
       <Providers>
         {/* Navbar with fixed positioning */}

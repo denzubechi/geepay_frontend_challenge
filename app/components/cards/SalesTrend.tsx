@@ -1,33 +1,16 @@
-"use client"
 import React from 'react'
-import {
-  Chart as ChartJS,
-  CategoryScale,
-  LinearScale,
-  BarElement,
-  Title,
-  Tooltip,
-  Legend,
-} from "chart.js";
-import { Bar } from "react-chartjs-2";
+import Chart from '../charts/Chart';
 
 const SalesTrend = () => {
 
-        const generateRandomValues = (numPoints: number, min: number, max: number) => {
-          const data = [];
-          for (let i = 0; i < numPoints; i++) {
-              data.push(Math.floor(Math.random() * (max - min + 1)) + min);
-          }
-          return data;
-      };
-      ChartJS.register(
-        CategoryScale,
-        LinearScale,
-        BarElement,
-        Title,
-        Tooltip,
-        Legend
-    );
+      const generateRandomValues = (numPoints: number, min: number, max: number) => {
+        const data = [];
+        for (let i = 0; i < numPoints; i++) {
+            data.push(Math.floor(Math.random() * (max - min + 1)) + min);
+        }
+        return data;
+    };
+  
     const data = {
       labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
       datasets: [
@@ -55,7 +38,7 @@ const SalesTrend = () => {
     };
 
   return (
-    <div className='bg-white text-gray-800 dark:bg-slate-950 dark:text-gray-200 p-4 m-2 ml-0 rounded-lg cards dark:border-0'>
+    <div className='bg-white text-gray-800 dark:bg-slate-900 dark:text-gray-200 p-4 m-2 ml-0 rounded-lg cards dark:border-0'>
         <div className="flex justify-between mx-auto items-center mb-4">
         <p className="whitespace-nowrap mr-2 text-lg font-medium dark:text-gray-300">
             Sales Trends
@@ -72,12 +55,8 @@ const SalesTrend = () => {
             <option value="US">Yearly</option>
           </select>
         </p>
-
     </div>
-    <div className="overflow-x-auto custom-scrollbar h-[250px] cursor-pointer">
-                    <Bar data={data} options={options} />
-                </div>
-   
+    <Chart chartData={data} chartOptions={options} />
 </div>
   )
 }

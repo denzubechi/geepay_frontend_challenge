@@ -15,11 +15,9 @@ const SideNav = () => {
     const handleMouseLeave = () => {
         setCollapsed(true);
     };
-
-    const sidebarClasses = `md:flex flex-col  justify-between pb-10 h-screen pt-24 lg:pt-28 border-r border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-slate-950 pl-3 absolute top-0 left-0 overflow-y-hidden ${
-        isCollapsed ? 'translate-x-0 w-18' : 'translate-x-1 w-40'
-    } transition-transform duration-500 ease-in-out`;
-
+    const sidebarClasses = `md:flex flex-col justify-between pb-10 h-screen pt-24 lg:pt-28 border-r  border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-slate-950 pl-3 absolute top-0 left-0 overflow-y-hidden ${
+      isCollapsed ? 'transition-collapsed w-18' : 'transition-expanded w-40'
+  } `;
     const linkTextClasses = `ml-2 ${isCollapsed ? 'hidden' : 'inline-block hover:text-white'}`;
 
     
@@ -155,7 +153,7 @@ const SideNav = () => {
          
         </div>
 
-        <div className={`${isCollapsed ? 'px-0' : 'px-8'} py-5 mb-20`}>
+        <div className={`${isCollapsed ? 'px-0' : 'px-8 pb-3'} mb-20`}>
             {/* Wrap ThemeSwitch in a separate div */}
             <div className="">
               <ThemeSwitch />

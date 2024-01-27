@@ -30,9 +30,8 @@ align-self: stretch;
 }
 .toggle{
   position: absolute;
-right: 1px;
-
-top: 9px;
+  right: 1px;
+  top: 9px;
 }
 .bg-layout{
   background-color: #F7F8FA;    
@@ -56,4 +55,17 @@ top: 9px;
 }
 .bg-progress{
   background: #ED544E;
+}
+/* Add these styles to your CSS or stylesheet */
+/* Add these styles to your CSS or stylesheet */
+.transition-collapsed {
+  transform: translateX(0);
+  width: 55px; /* Adjust the width for the collapsed state */
+  transition: transform 0.3s ease-in-out, width 0.3s ease-in-out;
+}
+
+.transition-expanded{
+  transform: translateX(0);
+  width: 120px; /* Adjust the width for the expanded state */
+  transition: transform 0.3s ease-in-out, width 0.3s ease-in-out;
 }

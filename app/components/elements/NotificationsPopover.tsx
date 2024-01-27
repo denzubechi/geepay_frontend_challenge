@@ -27,7 +27,7 @@ const NotificationPopover: FC<NotificationPopoverProps> = ({ buttonContent, noti
           leaveFrom="transform scale-100"
           leaveTo="transform scale-95"
         >
-          <Popover.Panel className="absolute top-10 -right-20 sm:right-20 sm:mr-20 z-50 mt-2 bg-white border-gray-400 dark:text-gray-300 dark:border-gray-500 dark:bg-gray-900 shadow-lg rounded-2xl max-w-xs sm:max-w-sm w-screen">
+          <Popover.Panel className="absolute top-10 -right-20  z-50 mt-2 bg-white border-gray-400 dark:text-gray-300 dark:border-gray-500 dark:bg-gray-900 shadow-lg rounded-2xl max-w-xs sm:max-w-sm w-screen">
             <div className="relative p-3">
               <div className="flex justify between items-center w-full">
                 <p className="text-gray-700 dark:text-gray-300 font-medium">Notifications </p>

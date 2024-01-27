@@ -15,9 +15,9 @@ const SideNav = () => {
     const handleMouseLeave = () => {
         setCollapsed(true);
     };
-    const sidebarClasses = `md:flex flex-col justify-between pb-10 h-screen pt-24 lg:pt-28 border-r  border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-slate-950 pl-3 absolute top-0 left-0 overflow-y-hidden ${
-      isCollapsed ? 'transition-collapsed w-18' : 'transition-expanded w-40'
-  } `;
+    const sidebarClasses = `md:flex flex-col  justify-between pb-10 h-screen pt-24 lg:pt-28 border-r border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-black pl-3 absolute top-0 left-0 ${
+      isCollapsed ? 'translate-x-0 w-18' : 'translate-x-0.5 w-40'
+  } transition-transform duration-500 ease-in-out`;
     const linkTextClasses = `ml-2 ${isCollapsed ? 'hidden' : 'inline-block hover:text-white'}`;
 
     

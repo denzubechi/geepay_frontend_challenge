@@ -8,19 +8,21 @@ export default function Home() {
 	return (
 		<>	
 			<div className="lg:flex mb-4">
+
 				<div className="lg:w-2/3">
 					<SalesTrend/>
 				</div>
 				<div className="lg:w-2/5 lg:pl-2 mt-4 lg:mt-0">
 					<TotalCards/>
 				</div>
-			</div>
 
+			</div>
 
 			<div className="lg:flex">
 				<div className="lg:w-2/3">
 					<LastOrders />
 				</div>
+				
 				<div className="lg:w-2/5 lg:pl-2 mt-4 lg:mt-0">
 					<TopPlartform />
 				</div>

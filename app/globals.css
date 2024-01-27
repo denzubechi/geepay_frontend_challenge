@@ -66,6 +66,6 @@ align-self: stretch;
 
 .transition-expanded{
   transform: translateX(0);
-  width: 140px; /* Adjust the width for the expanded state */
+  width: 150px; /* Adjust the width for the expanded state */
   transition: transform 0.3s ease-in-out, width 0.3s ease-in-out;
 }

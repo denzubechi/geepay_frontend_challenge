@@ -60,12 +60,12 @@ align-self: stretch;
 /* Add these styles to your CSS or stylesheet */
 .transition-collapsed {
   transform: translateX(0);
-  width: 55px; /* Adjust the width for the collapsed state */
+  width: 60px; /* Adjust the width for the collapsed state */
   transition: transform 0.3s ease-in-out, width 0.3s ease-in-out;
 }
 
 .transition-expanded{
   transform: translateX(0);
-  width: 120px; /* Adjust the width for the expanded state */
+  width: 130px; /* Adjust the width for the expanded state */
   transition: transform 0.3s ease-in-out, width 0.3s ease-in-out;
 }

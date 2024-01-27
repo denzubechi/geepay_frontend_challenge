@@ -153,7 +153,7 @@ const SideNav = () => {
          
         </div>
 
-        <div className={`${isCollapsed ? 'px-0' : 'px-8 pb-3'} mb-20`}>
+        <div className={`${isCollapsed ? 'px-0' : 'px-8'} py-5 mb-20`}>
             {/* Wrap ThemeSwitch in a separate div */}
             <div className="">
               <ThemeSwitch />

@@ -27,11 +27,11 @@ const NotificationPopover: FC<NotificationPopoverProps> = ({ buttonContent, noti
           leaveFrom="transform scale-100"
           leaveTo="transform scale-95"
         >
-          <Popover.Panel className="absolute top-10 -right-20 sm:right-20 sm:mr-20 z-50 mt-2 bg-white shadow-sm rounded-2xl max-w-xs sm:max-w-sm w-screen">
+          <Popover.Panel className="absolute top-10 -right-20 sm:right-20 sm:mr-20 z-50 mt-2 bg-white border-gray-400 dark:text-gray-300 dark:border-gray-500 dark:bg-gray-900 shadow-lg rounded-2xl max-w-xs sm:max-w-sm w-screen">
             <div className="relative p-3">
               <div className="flex justify between items-center w-full">
-                <p className="text-gray-700 font-medium">Notifications </p>
-                <a className="text-sm border border-green-500 rounded-full p-1 px-8 text-gray-400" href="#">
+                <p className="text-gray-700 dark:text-gray-300 font-medium">Notifications </p>
+                <a className="text-sm border border-green-500 rounded-full dark:text-gray-300 p-1 px-8 text-gray-400" href="#">
                   &ensp;Mark all as read
                 </a>
               </div>
@@ -44,10 +44,10 @@ const NotificationPopover: FC<NotificationPopoverProps> = ({ buttonContent, noti
                       </svg>
                     </div>
                     <div className="ml-4">
-                      <p className="font-medium text-gray-700">
+                      <p className="font-medium text-gray-700 dark:text-gray-300">
                         {notification.title}
                       </p>
-                      <p className="text-sm text-gray-500 truncate">
+                      <p className="text-sm text-gray-500 truncate dark:text-gray-400">
                         {notification.text}
                       </p>
                     </div>

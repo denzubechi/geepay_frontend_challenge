@@ -11,7 +11,7 @@ const ProfileMenuMobile: React.FC<ProfileMenuProps> = ({ children }) => {
     <Menu as="div" className="relative inline-block text-left">
       {({ open }) => (
         <>
-          <Menu.Button className="cursor-pointer focus:outline-none flex items-center space-x-3 p-1  py-1 mx-4 border border-gray-400 dark:border-gray-500 rounded-full">
+          <Menu.Button className="cursor-pointer focus:outline-none flex items-center space-x-3 p-1  py-1 ml-1 mr-4 border border-gray-400 dark:border-gray-500 rounded-full">
             <span className='rounded-full border border-gray-300 dark:border-gray-500'>
             {children}
             </span>

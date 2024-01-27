@@ -14,7 +14,7 @@ interface NotificationPopoverProps {
 const NotificationPopover: FC<NotificationPopoverProps> = ({ buttonContent, notifications }) => {
   return (
     <Popover className="relative">
-      <div className='cursor-pointer sm:flex md:flex items-center space-x-3 border border-gray-300 dark:gray-600 rounded-full p-2'>
+      <div className='cursor-pointer sm:flex md:flex items-center space-x-3 lg:border md:border border-gray-300 dark:gray-600 rounded-full  p-2'>
         <Popover.Button>
           {buttonContent}
         </Popover.Button>
@@ -31,7 +31,7 @@ const NotificationPopover: FC<NotificationPopoverProps> = ({ buttonContent, noti
             <div className="relative p-3">
               <div className="flex justify between items-center w-full">
                 <p className="text-gray-700 dark:text-gray-300 font-medium">Notifications </p>
-                <a className="text-sm border border-green-500 rounded-full dark:text-gray-300 p-1 px-8 text-gray-400" href="#">
+                <a className="text-sm border border-green-500 hover:bg-green-500 hover:text-gray-200 rounded-full dark:text-gray-300 p-1 px-8 text-gray-400" href="#">
                   &ensp;Mark all as read
                 </a>
               </div>
